@@ -40,9 +40,6 @@
       ;; 				   nil)))
 (setq smptmail-debug-info "t")
 
-;; (require 'bbdb)
-;; (bbdb-initialize 'gnus 'message)
-
 ;; gnus customization
 (setq gnus-summary-line-format ":%U%R %B %s %-60=|%-20,20f |%&user-date; \n")
 (setq gnus-sum-thread-tree-single-leaf " »")
