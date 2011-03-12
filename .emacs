@@ -1,3 +1,6 @@
+;;; ibuffer
+(global-set-key "\C-x\C-b" 'ibuffer)
+
 ;;; xsltxt
 (push "~/share/emacs/site-lisp/xsltxt" load-path)
 (require 'xsltxt)
