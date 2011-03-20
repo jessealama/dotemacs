@@ -1,3 +1,9 @@
+;;; cperl-mode is preferred to perl-mode
+;;; "Brevity is the soul of wit" <foo at acm.org>
+;;;
+;;; stolen from the emacs wiki (http://www.emacswiki.org/emacs/CPerlMode)
+(defalias 'perl-mode 'cperl-mode)
+
 ;;; eldoc
 (add-hook 'emacs-lisp-mode-hook 'turn-on-eldoc-mode)
 (add-hook 'lisp-interaction-mode-hook 'turn-on-eldoc-mode)
