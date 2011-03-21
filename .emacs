@@ -1,3 +1,9 @@
+;;; mac-key-mode
+(push "~/share/emacs/site-lisp/mac-key-mode" load-path)
+(require 'redo+)
+(require 'mac-key-mode)
+(mac-key-mode 1)
+
 ;;; cperl-mode is preferred to perl-mode
 ;;; "Brevity is the soul of wit" <foo at acm.org>
 ;;;
@@ -137,6 +143,7 @@
  '(initial-scratch-message nil)
  '(mail-user-agent (quote gnus-user-agent))
  '(mm-text-html-renderer (quote w3m))
+ '(ns-alternate-modifier (quote none))
  '(safe-local-variable-values (quote ((Package . CL-PPCRE) (Package . hunchentoot-dir-lister) (Base . 10) (Package . HUNCHENTOOT) (Syntax . COMMON-LISP) (Syntax . Common-Lisp) (eval add-hook (quote write-file-hooks) (quote time-stamp)))))
  '(scroll-bar-mode nil)
  '(show-paren-mode t)
