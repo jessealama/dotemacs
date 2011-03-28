@@ -1,3 +1,10 @@
+;;; markdown mode
+(push "~/share/emacs/site-lisp/markdown-mode" load-path)
+(autoload 'markdown-mode "markdown-mode.el"
+   "Major mode for editing Markdown files" t)
+(setq auto-mode-alist
+   (cons '("\\.mkd" . markdown-mode) auto-mode-alist))
+
 ;;; mac-key-mode
 (push "~/share/emacs/site-lisp/mac-key-mode" load-path)
 (require 'redo+)
