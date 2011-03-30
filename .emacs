@@ -125,6 +125,9 @@
   t)
 (add-hook 'lisp-mode-hook 'enable-paredit-mode)
 
+;;; dired-x
+(require 'dired-x)
+
 (custom-set-variables
   ;; custom-set-variables was added by Custom.
   ;; If you edit it by hand, you could mess it up, so be careful.
@@ -137,7 +140,7 @@
  '(bbdb-offer-save (quote savenoprompt))
  '(column-number-mode t)
  '(dired-dwim-target t)
- '(dired-guess-shell-alist-user (quote (("\\.svg$" "open"))))
+ '(dired-guess-shell-alist-user (quote (("\\.svg$" "open") ("\\.html$" "open"))))
  '(dired-recursive-copies (quote always))
  '(dired-recursive-deletes (quote always))
  '(gnus-group-mode-hook (quote (gnus-topic-mode gnus-agent-mode)))
