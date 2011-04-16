@@ -152,6 +152,7 @@
  '(initial-buffer-choice t)
  '(initial-scratch-message nil)
  '(mail-user-agent (quote gnus-user-agent))
+ '(markdown-command "markdown")
  '(mm-text-html-renderer (quote w3m))
  '(ns-alternate-modifier (quote none))
  '(safe-local-variable-values (quote ((Package . CL-WHO) (Package . CL-USER) (Package . CL-PPCRE) (Package . hunchentoot-dir-lister) (Base . 10) (Package . HUNCHENTOOT) (Syntax . COMMON-LISP) (Syntax . Common-Lisp) (eval add-hook (quote write-file-hooks) (quote time-stamp)))))
