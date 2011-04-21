@@ -147,7 +147,7 @@
  '(gnus-ignored-newsgroups "^to\\.\\|^[0-9. 	]+\\( \\|$\\)\\|^[\"]\"[#'()]")
  '(gnus-posting-styles (quote ((".*" (name "Jesse Alama") (address "jesse.alama@gmail.com") ("Bcc" "jesse.alama@gmail.com")))))
  '(gnus-secondary-select-methods (quote ((nnml "") (nnimap "imap.gmail.com" (nnimap-server-port 993) (nnimap-authinfo-file "~/.authinfo") (nnimap-stream ssl)))))
- '(inferior-lisp-program "sbcl")
+ '(inferior-lisp-program "clisp")
  '(inhibit-startup-echo-area-message "alama")
  '(initial-buffer-choice t)
  '(initial-scratch-message nil)
