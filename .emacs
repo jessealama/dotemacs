@@ -155,7 +155,7 @@
  '(markdown-command "markdown")
  '(mm-text-html-renderer (quote w3m))
  '(ns-alternate-modifier (quote none))
- '(safe-local-variable-values (quote ((Package . CL-WHO) (Package . CL-USER) (Package . CL-PPCRE) (Package . hunchentoot-dir-lister) (Base . 10) (Package . HUNCHENTOOT) (Syntax . COMMON-LISP) (Syntax . Common-Lisp) (eval add-hook (quote write-file-hooks) (quote time-stamp)))))
+ '(safe-local-variable-values (quote ((Package MEMOIZE) (Syntax . ANSI-COMMON-LISP) (Package . CL-WHO) (Package . CL-USER) (Package . CL-PPCRE) (Package . hunchentoot-dir-lister) (Base . 10) (Package . HUNCHENTOOT) (Syntax . COMMON-LISP) (Syntax . Common-Lisp) (eval add-hook (quote write-file-hooks) (quote time-stamp)))))
  '(scroll-bar-mode nil)
  '(show-paren-mode t)
  '(slime-net-coding-system (quote utf-8-unix)))
