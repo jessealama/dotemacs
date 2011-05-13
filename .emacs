@@ -124,6 +124,7 @@
   "Turn on pseudo-structural editing of Lisp code."
   t)
 (add-hook 'lisp-mode-hook 'enable-paredit-mode)
+(add-hook 'slime-mode-hook 'enable-paredit-mode)
 
 ;;; dired-x
 (require 'dired-x)
