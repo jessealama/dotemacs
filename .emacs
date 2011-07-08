@@ -106,6 +106,7 @@
 (push "~/share/emacs/site-lisp/auctex" load-path)
 (load "auctex.el" nil t t)
 (load "preview-latex.el" nil t t)
+(add-hook 'LaTeX-mode-hook 'TeX-toggle-debug-warnings)
 
 ;;; utf-8
 (setenv "LANG" "en_US.UTF-8")
