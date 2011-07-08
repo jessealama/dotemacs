@@ -1,3 +1,9 @@
+;;; drew adams stuff
+(push "~/share/emacs/site-lisp/drewa" load-path)
+
+;;; bookmark+
+(require 'bookmark+-1 "bookmark+-1")
+
 ;;; markdown mode
 (push "~/share/emacs/site-lisp/markdown-mode" load-path)
 (autoload 'markdown-mode "markdown-mode.el"
