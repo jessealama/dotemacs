@@ -156,7 +156,7 @@
  '(bbdb-offer-save (quote savenoprompt))
  '(column-number-mode t)
  '(dired-dwim-target t)
- '(dired-guess-shell-alist-user (quote (("\\.svg$" "open") ("\\.html$" "open") ("\\.pdf$" "open"))))
+ '(dired-guess-shell-alist-user (quote (("\\.tiff$" "open") ("\\.svg$" "open") ("\\.html$" "open") ("\\.pdf$" "open") ("\\.jp[e]?g$" "open") ("\\.png$" "open") ("\\.gif$" "open"))))
  '(dired-recursive-copies (quote always))
  '(dired-recursive-deletes (quote always))
  '(gnus-group-mode-hook (quote (gnus-topic-mode gnus-agent-mode)))
