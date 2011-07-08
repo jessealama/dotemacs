@@ -11,6 +11,14 @@
 (require 'mac-key-mode)
 (mac-key-mode 1)
 
+;;; org mode
+(push "~/share/emacs/site-lisp/org" load-path)
+(add-to-list 'auto-mode-alist '("\\.org\\'" . org-mode))
+(global-set-key "\C-cl" 'org-store-link)
+(global-set-key "\C-cc" 'org-capture)
+(global-set-key "\C-ca" 'org-agenda)
+(global-set-key "\C-cb" 'org-iswitchb)
+
 ;;; cperl-mode is preferred to perl-mode
 ;;; "Brevity is the soul of wit" <foo at acm.org>
 ;;;
