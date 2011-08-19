@@ -1,8 +1,30 @@
+;;; nxhtml
+;(load "~/share/emacs/site-lisp/nxhtml/autostart.el")
+
+;;; delete-trailing-whitespace
+(add-hook 'before-save-hook (lambda () (delete-trailing-whitespace)))
+
+;; ce-el
+(push "~/sources/ce-el" load-path)
+(require 'ce)
+(ce-mode 1)
+
+;;; delete
+(delete-selection-mode 1)
+
 ;;; drew adams stuff
-(push "~/share/emacs/site-lisp/drewa" load-path)
+;(push "~/share/emacs/site-lisp/drewa" load-path)
+
+;;; loccur
+(push "~/share/emacs/site-lisp/loccur" load-path)
+(require 'loccur)
+
+;;; tptp-el
+(push "~/sources/tptp-el" load-path)
+(require 'tptp)
 
 ;;; bookmark+
-(require 'bookmark+-1 "bookmark+-1")
+;(require 'bookmark+-1 "bookmark+-1")
 
 ;;; markdown mode
 (push "~/share/emacs/site-lisp/markdown-mode" load-path)
@@ -12,10 +34,10 @@
    (cons '("\\.mkd" . markdown-mode) auto-mode-alist))
 
 ;;; mac-key-mode
-(push "~/share/emacs/site-lisp/mac-key-mode" load-path)
-(require 'redo+)
-(require 'mac-key-mode)
-(mac-key-mode 1)
+;(push "~/share/emacs/site-lisp/mac-key-mode" load-path)
+;(require 'redo+)
+;(require 'mac-key-mode)
+;(mac-key-mode 1)
 
 ;;; org mode
 (push "~/share/emacs/site-lisp/org" load-path)
@@ -35,6 +57,9 @@
 (add-hook 'emacs-lisp-mode-hook 'turn-on-eldoc-mode)
 (add-hook 'lisp-interaction-mode-hook 'turn-on-eldoc-mode)
 (add-hook 'ielm-mode-hook 'turn-on-eldoc-mode)
+
+;;; no trailing whitespace!
+(add-hook 'before-save-hook (lambda () (delete-trailing-whitespace)))
 
 ;;; ibuffer
 (global-set-key "\C-x\C-b" 'ibuffer)
@@ -91,9 +116,9 @@
 ;; (setq nnmail-split-methods 'nnmail-split-fancy)
 ;; (setq nnmail-split-fancy
 ;;       `(| ("User-Agent" "rss2email" "rss.feeds")
-;;       (from "JIRA" "mail.apache.jira") 
-;;           (any "svn commit" "mail.apache.commits") 
-;;           ("Mailing-List" "contact \\[-a-z]*\\-help@\\[.a-z]*\\apache.org" "mail.apache.\\2\\1") 
+;;       (from "JIRA" "mail.apache.jira")
+;;           (any "svn commit" "mail.apache.commits")
+;;           ("Mailing-List" "contact \\[-a-z]*\\-help@\\[.a-z]*\\apache.org" "mail.apache.\\2\\1")
 ;;           ;; unmatched goes to misc
 ;;           "mail.misc"))
 
@@ -126,7 +151,10 @@
 ;;; mizar
 (push "~/sources/mizar/mizarmode" load-path)
 (require 'mizar)
+(require 'mizar-voc)
 (add-to-list 'auto-mode-alist '("\\.miz\\'" . mizar-mode))
+(add-to-list 'auto-mode-alist '("\\.voc\\'" . mizar-mode))
+
 
 ;;; slime
 (load (expand-file-name "~/quicklisp/slime-helper.el"))
@@ -149,7 +177,8 @@
   ;; If you edit it by hand, you could mess it up, so be careful.
   ;; Your init file should contain only one such instance.
   ;; If there is more than one, they won't work right.
- '(LaTeX-mode-hook (quote (turn-on-reftex)))
+ '(*paradox-program* "paradox")
+ '(LaTeX-mode-hook (quote (turn-on-reftex)) t)
  '(TeX-PDF-mode t)
  '(TeX-view-program-list (quote (("open" "/usr/bin/open %o"))))
  '(TeX-view-program-selection (quote (((output-dvi style-pstricks) "dvips and gv") (output-dvi "xdvi") (output-pdf "open") (output-html "xdg-open"))))
@@ -159,21 +188,24 @@
  '(dired-guess-shell-alist-user (quote (("\\.tiff$" "open") ("\\.svg$" "open") ("\\.html$" "open") ("\\.pdf$" "open") ("\\.jp[e]?g$" "open") ("\\.png$" "open") ("\\.gif$" "open"))))
  '(dired-recursive-copies (quote always))
  '(dired-recursive-deletes (quote always))
+ '(emacs-lisp-mode-hook (quote (turn-on-eldoc-mode checkdoc-minor-mode enable-paredit-mode)))
+ '(exec-path (quote ("/sw/bin" "/usr/bin" "/bin" "/usr/sbin" "/sbin" "/Applications/Emacs.app/Contents/MacOS/bin")))
  '(gnus-agent t)
  '(gnus-group-mode-hook (quote (gnus-topic-mode gnus-agent-mode)))
  '(gnus-ignored-newsgroups "^to\\.\\|^[0-9. 	]+\\( \\|$\\)\\|^[\"]\"[#'()]")
  '(gnus-posting-styles (quote ((".*" (name "Jesse Alama") (address "jesse.alama@gmail.com") ("Bcc" "jesse.alama@gmail.com")))))
  '(gnus-secondary-select-methods nil)
  '(gnus-treat-body-boundary (quote head))
- '(inferior-lisp-program "sbcl")
+ '(inferior-lisp-program "/Users/alama/sources/ccl-darwinx86/dx86cl64")
  '(inhibit-startup-echo-area-message "alama")
  '(initial-buffer-choice t)
  '(initial-scratch-message nil)
  '(mail-user-agent (quote gnus-user-agent))
+ '(majmodpri-no-nxml t)
  '(markdown-command "markdown")
  '(mm-text-html-renderer (quote w3m))
  '(ns-alternate-modifier (quote none))
- '(safe-local-variable-values (quote ((auto-fill-mode . t) (Syntax . ANSI-Common-Lisp) (Package . DRAKMA) (Package MEMOIZE) (Syntax . ANSI-COMMON-LISP) (Package . CL-WHO) (Package . CL-USER) (Package . CL-PPCRE) (Package . hunchentoot-dir-lister) (Base . 10) (Package . HUNCHENTOOT) (Syntax . COMMON-LISP) (Syntax . Common-Lisp) (eval add-hook (quote write-file-hooks) (quote time-stamp)))))
+ '(safe-local-variable-values (quote ((Package . CCL) (auto-fill-mode . t) (Syntax . ANSI-Common-Lisp) (Package . DRAKMA) (Package MEMOIZE) (Syntax . ANSI-COMMON-LISP) (Package . CL-WHO) (Package . CL-USER) (Package . CL-PPCRE) (Package . hunchentoot-dir-lister) (Base . 10) (Package . HUNCHENTOOT) (Syntax . COMMON-LISP) (Syntax . Common-Lisp) (eval add-hook (quote write-file-hooks) (quote time-stamp)))))
  '(scroll-bar-mode nil)
  '(show-paren-mode t)
  '(slime-net-coding-system (quote utf-8-unix)))
