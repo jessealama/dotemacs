@@ -49,8 +49,8 @@
 ;(push "~/share/emacs/site-lisp/drewa" load-path)
 
 ;;; loccur
-(push "~/share/emacs/site-lisp/loccur" load-path)
-(require 'loccur)
+;(push "~/share/emacs/site-lisp/loccur" load-path)
+;(require 'loccur)
 
 ;;; tptp-el
 (push "~/sources/tptp-el/emacs" load-path)
